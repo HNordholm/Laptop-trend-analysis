@@ -4,54 +4,54 @@
 #Here I will perform a number of queries to get a better insight into the data. 
 #After each query, I will provide a short summary of the result.
 
-SELECT company, ROUND(AVG(priceUSD),2) AS avarageprice FROM ltclean2
+SELECT company, ROUND(AVG(priceUSD),2) AS averageprice FROM ltclean2
 GROUP BY company
-ORDER BY avarageprice DESC; 
+ORDER BY averageprice DESC; 
 
-SELECT company, ROUND(AVG(priceUSD),2) AS avarageprice FROM ltclean2
+SELECT company, ROUND(AVG(priceUSD),2) AS averageprice FROM ltclean2
 GROUP BY company
-ORDER BY avarageprice ASC; 
+ORDER BY averageprice ASC; 
 
-# On avarage, Razer has the most expensive laptops with avarage price of 2139USD followed by
+# On average, Razer has the most expensive laptops with avarage price of 2139USD followed by
 # LG (1342USD) and MSI(1101USD). Vero(139USD),Mediacom(188USD) and Chuwi(200USD) has the cheapest laptops. 
 
 SELECT typename,ROUND(AVG(priceUSD),2) AS avarageprice FROM ltclean2
 GROUP BY typename 
-ORDER BY avarageprice DESC; 
+ORDER BY averageprice DESC; 
 
-#On avarage, laptops of type workstation(1455USD) is most expensive followed by gaming laptops(1106USD). 
+#On average, laptops of type workstation(1455USD) is most expensive followed by gaming laptops(1106USD). 
 #Cheapest types is netbooks(444USD) followed by notebooks(503USD). 
 
 
-SELECT ips_panel, ROUND(AVG(priceUSD),2) AS avarageprice
+SELECT ips_panel, ROUND(AVG(priceUSD),2) AS averageprice
 FROM ltclean2
 GROUP BY ips_panel;
 
-#Laptops with feature IPS-panel is on avarage 253USD more expensive then 
+#Laptops with feature IPS-panel is on average 253USD more expensive then 
 #laptops without IPS-panel. 
 #Hypothesis testing will be performed in R to validate significant difference. 
 
-SELECT touchscreen, ROUND(AVG(priceUSD),2) AS avarageprice
+SELECT touchscreen, ROUND(AVG(priceUSD),2) AS averageprice
 FROM ltclean2
 GROUP BY touchscreen;
 
-#Laptops with touchscreen is on avarage avarage 239USD more expensive then 
+#Laptops with touchscreen is on average 239USD more expensive then 
 #laptops without touchscreen. 
 #Hypothesis testing will be performed in R to validate significant difference. 
 
 
-SELECT memory,ROUND(AVG(priceUSD),2) AS avarageprice
+SELECT memory,ROUND(AVG(priceUSD),2) AS averageprice
 FROM ltclean2
 GROUP BY memory
-ORDER BY avarageprice DESC; 
+ORDER BY averageprice DESC; 
 
-#On avarage, memorys with 1TB SSD + 1TB HDD is most expensive(2317USD) followed by 512GB SSD + 1TB hybrid(2071USD).'
+#On average, memorys with 1TB SSD + 1TB HDD is most expensive(2317USD) followed by 512GB SSD + 1TB hybrid(2071USD).
 #Cheapest are memorys with 16GB SSD(143USD), 32GB SSD(182USD) is more expensive then 32GBHHD(169USD).
 
-SELECT resolution_category, ROUND(AVG(priceUSD),2) AS avarageprice
+SELECT resolution_category, ROUND(AVG(priceUSD),2) AS averageprice
 FROM ltclean2
 GROUP BY resolution_category
-ORDER BY avarageprice DESC; 
+ORDER BY averageprice DESC; 
 
 #QuadHD most expensive, followed by fullHD and no-HD. 
 
