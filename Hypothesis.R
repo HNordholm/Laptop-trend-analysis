@@ -1,4 +1,9 @@
 
+
+#Libraries 
+library(tidyverse)
+library(ggplot2)
+
 #Load data 
 laptopclean <- read.csv("C:/Users/hampu/OneDrive/Skrivbord/laptopmining/laptopclean.csv")
 
