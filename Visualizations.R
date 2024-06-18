@@ -1,6 +1,5 @@
 
 #Loading neccesary packages
-library(ggplot2)
 library(tidyverse)
 
 #Load data 
