@@ -4,7 +4,6 @@
 
 #Loading libraries
 library(tidyverse)
-library(ggplot2)
 library(car)
 
 
